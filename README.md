@@ -1,70 +1,179 @@
-# Getting Started with Create React App
+## Hello Rails App - Front-End
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<a name="readme-top"></a>
+<div align="center">
+    <img src="/logo_jcm_md.png" alt="main-logo" width="500"  height="auto" />
+  <br/>
+  <h3><b>Hello Rails App - Front-End</b></h3>
+</div>
+📗 Table of Contents <a name="table_of-contents"></a>
 
-## Available Scripts
+- [📗 Table of Contents](#table-of-contents)
+- [📖 About project ](#about-project)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [❓ FAQ ](#-faq-)
+  - [📝 License ](#-license-)
 
-In the project directory, you can run:
+## 📖 About project - Hello Rails App - Front-End <a name="about-project"></a>
 
-### `npm start`
+The 'Hello Rails Front-End' App is a basic front-end application configured with React and Redux designed to display a random 'Hello World' message. It connects to an API endpoint set up in a complementary back-end Rails application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Front-end application name: hello-react-front-end-2
+  link: https://github.com/jcmunav63/hello-react-front-end-2.git
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Back-end application name: hello-rails-back-end-2
+  link: https://github.com/jcmunav63/hello-rails-back-end-2.git
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠 Built With <a name="built-with"></a>
 
-### `npm run build`
+### Tech Stack <a name="tech-stack"></a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  <ul>
+    <li><a href="https://ruby-doc.org/">Ruby v 3.2.2</a></li>
+    <li><a href="https://rubyonrails.org/">Rails v 7.1.2</a></li>
+    <li><a href="https://www.postgresql.org/">PostgreSQL v 16.1.1</a></li>
+  </ul>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Key Features <a name="key-features"></a>
+- **Set up a Ruby on Rails project together with React.js as the front-end.**
+- **Set up linters using Stylelint and Rubocop**
+- **Connect the Rails project to a PostgreSQL database.**
+- **Implement an API endpoint to display a random 'Hello World' message in JSON format.**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### `npm run eject`
+## 💻 Getting Started <a name="getting-started"></a>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To get a local copy up and running, follow these steps.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+In order to run this project you need:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+[Install Ruby](https://www.ruby-lang.org/en/documentation/installation/)
 
-## Learn More
+[Set Up Rails](https://www.ruby-lang.org/en/documentation/installation/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Prerequisites: Ruby, Ruby Development Kit (for Windows), Ruby Gems packaging system, and PostgreSQL database server. Run the following commands...
+```sh
+$ gem install rails
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Setup
 
-### Code Splitting
+```sh
+  cd my-folder
+  git clone https://github.com/jcmunav63/hello-rails-back-end-2.git
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Install
 
-### Analyzing the Bundle Size
+This project requires the following dependencies: the Ruby interpreter, the Gem package manager, the Ruby on Rails web framework, a PostgreSQL database server, the Webpack JS module bundler, the jsbundling-rails gem, and two linters checkers: RuboCop (Ruby) and Stylelint (CSS styles).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```sh
+bundle install
+```
 
-### Making a Progressive Web App
+### Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+To run the project, navigate to the project directory and execute the following command:
 
-### Advanced Configuration
+Start the Ruby on Rails web server (Puma server) typing the following command...
+```sh
+  rails s , or the complete command,
+  rails server
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Check linters
 
-### Deployment
+* Install the Rubocop linters checker.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Install the Rubocop linters checker using the following steps...
+- First add the following code to the Gem file:
+```sh
+gem 'rubocop', '>= 1.0', '< 2.0'
+```
+- Second run the command to install dependicies in your project:
+```sh
+bundle install
+```
+- Remember to copy the .rubocop.yml file to your root directory.
 
-### `npm run build` fails to minify
+gem 'rubocop', '>= 1.0', '< 2.0'
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Copy the linters.yml file inside of path .github/workflows
+
+
+To run LINTERS, run the following command:
+
+Run the following command for Ruby code...
+```sh
+rubocop
+```
+
+* Unit, request, and integration tests will be developed on another stage.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Juan Carlos Muñoz**
+
+- GitHub: [@jcmunav63](https://github.com/jcmunav63)
+- Twitter: [@jcmunav63](https://twitter.com/jcmunav63)
+- LinkedIn: [@juan-carlos-muñoz](https://www.linkedin.com/in/juan-carlos-mu%C3%B1oz-5a15b6276/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- **Add instructions to this file in order to use it as a template for new projects using Rails & React.**
+- *** Unit, request, and integration tests will be developed on another stage.**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project please give me a star on Github. Thanks in advance.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank all my colleagues, who inspire me to do my best everyday.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## ❓ FAQ <a name="faq"></a>
+
+**Did you create this project from scratch?**
+
+  - It is a simple Ruby on Rails project on the backend with connection to React.js on the frontend. It uses two separate repos, this one for the back-end (Ruby on Rails), and another repor for the front-end (React & Redux).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>

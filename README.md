@@ -29,7 +29,7 @@
 
 ## 📖 About project - Hello Rails App - Front-End <a name="about-project"></a>
 
-The 'Hello Rails Front-End' App is a basic front-end application configured with React and Redux designed to display a random 'Hello World' message. It connects to an API endpoint set up in a complementary back-end Rails application.
+The 'Hello Rails Front-End' App is a basic front-end application configured with React and Redux, designed to display a random 'Hello World' message. It connects to an API endpoint set up in a complementary back-end Ruby on Rails application.
 
 Front-end application name: hello-react-front-end-2
   link: https://github.com/jcmunav63/hello-react-front-end-2.git
@@ -43,16 +43,15 @@ Back-end application name: hello-rails-back-end-2
 ### Tech Stack <a name="tech-stack"></a>
 
   <ul>
-    <li><a href="https://ruby-doc.org/">Ruby v 3.2.2</a></li>
-    <li><a href="https://rubyonrails.org/">Rails v 7.1.2</a></li>
-    <li><a href="https://www.postgresql.org/">PostgreSQL v 16.1.1</a></li>
+    <li><a href="https://react.dev/">React v 18.2.0</a></li>
+    <li><a href="https://redux.js.org/">Redux v 5.0.1</a></li>
   </ul>
 
 ### Key Features <a name="key-features"></a>
-- **Set up a Ruby on Rails project together with React.js as the front-end.**
-- **Set up linters using Stylelint and Rubocop**
-- **Connect the Rails project to a PostgreSQL database.**
-- **Implement an API endpoint to display a random 'Hello World' message in JSON format.**
+- **Set up a React.js app to work as the front-end for displaying a random message.**
+- **Install Redux and the main dependencies for React & Redux.**
+- **Set up linters using Stylelint and ESLint.**
+- **Set up a store, together with the required actions and reducers.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -64,25 +63,31 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-[Install Ruby](https://www.ruby-lang.org/en/documentation/installation/)
+[Install a React app](https://www.ruby-lang.org/en/documentation/installation/)
 
-[Set Up Rails](https://www.ruby-lang.org/en/documentation/installation/)
+[Install Redux](https://www.ruby-lang.org/en/documentation/installation/)
 
-Prerequisites: Ruby, Ruby Development Kit (for Windows), Ruby Gems packaging system, and PostgreSQL database server. Run the following commands...
+Prerequisites: Node.js, npm package manager. Run the following command to create a regular React.js app...
 ```sh
-$ gem install rails
+$ npx create-react-app hello-react-front-end-2
 ```
+
+Or, if you are inside of the project folder...
+```sh
+$ npx create-react-app .
+```
+
 
 ### Setup
 
 ```sh
   cd my-folder
-  git clone https://github.com/jcmunav63/hello-rails-back-end-2.git
+  git clone https://github.com/jcmunav63/hello-react-front-end-2.git
 ```
 
 ### Install
 
-This project requires the following dependencies: the Ruby interpreter, the Gem package manager, the Ruby on Rails web framework, a PostgreSQL database server, the Webpack JS module bundler, the jsbundling-rails gem, and two linters checkers: RuboCop (Ruby) and Stylelint (CSS styles).
+This project requires the following dependencies: Node.js, the npm package manager. For the app to work it need to install: React.js, Redux.js, react-redux, axios, redux-thunk, and reduxjs-toolkit.
 
 ```sh
 bundle install
@@ -90,39 +95,54 @@ bundle install
 
 ### Usage
 
-To run the project, navigate to the project directory and execute the following command:
+To run the project, execute the following command on your terminal:
 
-Start the Ruby on Rails web server (Puma server) typing the following command...
+Start the React web server typing the following command...
 ```sh
-  rails s , or the complete command,
-  rails server
+  npm start
 ```
 
 ### Check linters
 
-* Install the Rubocop linters checker.
+* Install the Stylelint and ESLint linters checkers.
 
-Install the Rubocop linters checker using the following steps...
-- First add the following code to the Gem file:
+Install the Stylelint linters checker using the following steps...
+- First, install the Stylelint package:
 ```sh
-gem 'rubocop', '>= 1.0', '< 2.0'
+npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
 ```
-- Second run the command to install dependicies in your project:
+- Second, run the Stylelint linters checker with the following command:
 ```sh
-bundle install
+npx stylelint "**/*.{css,scss}"
 ```
-- Remember to copy the .rubocop.yml file to your root directory.
+- Remember to copy the .stylelintrc.json file to your root directory.
 
-gem 'rubocop', '>= 1.0', '< 2.0'
 
-- Copy the linters.yml file inside of path .github/workflows
+Install the ESlint linters checker using the following steps...
+- First, install the ESlint package:
+```sh
+npm install --save-dev eslint@7.x eslint-config-airbnb@18.x eslint-plugin-import@2.x eslint-plugin-jsx-a11y@6.x eslint-plugin-react@7.x eslint-plugin-react-hooks@4.x @babel/eslint-parser@7.x @babel/core@7.x  @babel/plugin-syntax-jsx@7.x  @babel/preset-react@7.x @babel/preset-react@7.x
+```
+- Second, run the Stylelint linters checker with the following command:
+```sh
+npx eslint "**/*.{js,jsx}"
+```
+- Remember to copy the .eslintrc.json and .babelrc files to your root directory.
+
+- Finally, copy the linters.yml file inside of path .github/workflows
 
 
 To run LINTERS, run the following command:
 
 Run the following command for Ruby code...
+Stylelint:
 ```sh
-rubocop
+npx stylelint "**/*.{css,scss}"
+```
+
+ESlint:
+```sh
+npx eslint "**/*.{js,jsx}"
 ```
 
 * Unit, request, and integration tests will be developed on another stage.
@@ -168,7 +188,7 @@ I would like to thank all my colleagues, who inspire me to do my best everyday.
 
 **Did you create this project from scratch?**
 
-  - It is a simple Ruby on Rails project on the backend with connection to React.js on the frontend. It uses two separate repos, this one for the back-end (Ruby on Rails), and another repor for the front-end (React & Redux).
+  - It is a simple Ruby on Rails project on the front-end with connection to a Ruby on Rails app on the back-end. This project uses two separate repos, this one is for the front-end (React & Redux), and the other repo is for the back-end (Ruby on Rails).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

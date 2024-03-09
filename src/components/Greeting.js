@@ -19,7 +19,15 @@ const Greeting = () => {
           {error}
         </p>
       )}
-      {greeting && <p>{greeting.message}</p>}
+      {greeting && (
+        <p>
+          id:&nbsp;
+          {greeting.id}
+          <span className="separator" />
+          message:&nbsp;
+          {greeting.message}
+        </p>
+      )}
     </div>
   );
 };

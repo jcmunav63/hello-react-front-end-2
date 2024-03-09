@@ -25,3 +25,14 @@ code {
     'Courier New',
     monospace;
 }
+
+p {
+  font-size: 1.5rem;
+  margin-left: 10%;
+  margin-top: 50px;
+  font-weight: 600;
+}
+
+.separator {
+  margin-right: 15px;
+}

@@ -13,8 +13,13 @@ const Greeting = () => {
   return (
     <div>
       {loading && <p>Loading...</p>}
-      {error && <p>Error: {error}</p>}
-      {greeting && <p>{greeting}</p>}
+      {error && (
+        <p>
+          Error:
+          {error}
+        </p>
+      )}
+      {greeting && <p>{greeting.message}</p>}
     </div>
   );
 };
